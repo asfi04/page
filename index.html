@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fatema’s Portfolio</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header data-aos="fade-down">
+    <nav class="navbar">
+      <div class="logo">Fatema Johora</div>
+      <ul class="nav-links">
+        <li><a href="#about" class="hover-highlight">About</a></li>
+        <li><a href="#education" class="hover-highlight">Education</a></li>
+        <li><a href="#employment" class="hover-highlight">Employment</a></li>
+        <li><a href="#portfolio" class="hover-highlight">Portfolio</a></li>
+        <li><a href="#skills" class="hover-highlight">Skills</a></li>
+        <li><a href="#contact" class="hover-highlight">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up" style="background-image: url('images/hero-bg.png');">
+    <h1 class="hero-intro">Hi, I’m</h1>
+    <h1 class="hero-title">FATEMA TUJ JOHORA</h1>
+    <p class="hero-subtitle">
+      <strong>Creative Graphic Designer &amp; Sales Executive</strong>
+    </p>
+  </section>
+  
+  <!-- ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images/fatema.jpg" alt="Fatema Tuj Johora" class="profile-pic" data-aos="zoom-in"/>
+      <p data-aos="fade-left" data-aos-delay="200">
+        Proactive and detail-oriented professional with hands-on experience in graphic design, complemented by a solid background in data entry, online sales, and customer engagement. Recently completed SR DreamIT’s Graphic Design Masterclass, gaining practical skills in content creation and visual branding. Adept at working in fast-paced, team-driven environments with a strong focus on creativity, communication, and continuous improvement. To apply my hands-on training in data entry, sales, and graphic design to contribute effectively in a fast-paced, team-oriented environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul class="detail-list">
+      <li><strong>Bachelor of Arts in Islamic History & Culture</strong> — Netrakona Govt. College (2023-Present)</li>
+      <li><strong>Alim (HSC) | Arts</strong> — N. Akanda Kamil Madrasha, Netrokona (GPA: 4.80/5, 2022)</li>
+      <li><strong>Dakhil (SSC) | Arts</strong> — Latifa Abbas Mohila Alim Madrasha, Netrokona (GPA: 4.88/5, 2020)</li>
+      <li><strong>JDC</strong> — Latifa Abbas Mohila Alim Madrasha (CGPA: 5/5, 2017) <em>(Golden A+, Merit Scholarship)</em></li>
+      <li><strong>Ebtedayee</strong> — Latifa Abbas Mohila Alim Madrasha (CGPA: 5/5, 2014) <em>(Golden A+, Merit Scholarship)</em></li>
+    </ul>
+  </section>
+
+  <!-- EMPLOYMENT HISTORY -->
+  <section id="employment" class="section" data-aos="fade-up">
+    <h2>Employment History</h2>
+    <p><strong>Total Experience:</strong> 2.2 years</p>
+    <ul class="detail-list">
+      <li class="hover-highlight">
+        <strong>Graphic Designer & Page Moderator</strong> — Shopbunny<br>
+        <span class="subheading">1 Apr 2023 – Aug 2023 | 5 Months</span><br>
+        <strong>Expertise:</strong> Online Sales (0.5 yr), Sales & Marketing (0.5 yr)<br>
+        <strong>Duties:</strong> Logo, banner, poster, and product design. <br>
+        Page maintenance, customer support, content creation, product selling, online sales.
+      </li>
+      <li class="hover-highlight">
+        <strong>Data Collector</strong> — District Statistics Office, BBS, Netrokona<br>
+        <span class="subheading">15 Jun 2022 – 21 Jul 2022 | 0.2 yrs</span><br>
+        <strong>Expertise:</strong> Data Management & Analysis (0.2 yr)<br>
+        <strong>Duties:</strong> Field data collection for national census
+      </li>
+      <li class="hover-highlight">
+        <strong>Sales Executive</strong> — FTJ Dress Sell BD<br>
+        <span class="subheading">15 Feb 2022 – 23 Dec 2022 | 0.9 yrs</span><br>
+        <strong>Expertise:</strong> Sales & Marketing (0.8 yr)<br>
+        <strong>Duties:</strong> Promoted and sold products via Facebook pages and groups. <br>
+        Conducted sales and managed customer inquiries.
+      </li>
+      <li class="hover-highlight">
+        <strong>Seller</strong> — Kajol Fashion House<br>
+        <span class="subheading">16 Mar 2021 – 30 Dec 2021 | 0.8 yrs</span><br>
+        <strong>Expertise:</strong> Sales & Marketing (0.8 yr)<br>
+        <strong>Duties:</strong> Product sales via Facebook pages/groups
+      </li>
+    </ul>
+  </section>
+
+<!-- PORTFOLIO FILTERS + CAROUSEL -->
+<section id="portfolio" class="section" data-aos="fade-up">
+  <h2>My Works</h2>
+
+  <!-- Text-menu filters -->
+  <div class="portfolio-menu">
+    <span class="menu-item" data-filter="all">All</span>
+    <span class="menu-item" data-filter="tshirt">T-Shirt</span>
+    <span class="menu-item active" data-filter="restaurant">Restaurant</span>
+    <span class="menu-item" data-filter="fruit">Fruit</span>
+    <span class="menu-item" data-filter="grocery">Grocery</span>
+    <span class="menu-item" data-filter="logo">Logo</span>
+    <span class="menu-item" data-filter="shoes">Shoes</span>
+    <span class="menu-item" data-filter="game">Game</span>
+    <span class="menu-item" data-filter="banner">Banner</span>
+    <span class="menu-item" data-filter="thumbnail">Thumbnail</span>
+  </div>
+
+  <!-- Swiper carousel (unchanged markup) -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+       <!-- Fruits -->
+      <div class="swiper-slide" data-category="fruit">
+        <img class="portfolio-item" src="images/fruit/fruit_lemon.jpg" alt="fruit"/>
+      </div>
+      <div class="swiper-slide" data-category="fruit">
+        <img class="portfolio-item" src="images/fruit/fruit_milk_shake.jpg" alt="fruit"/>
+      </div>
+      <div class="swiper-slide" data-category="fruit">
+        <img class="portfolio-item" src="images/fruit/fruit_pomegranate.jpg" alt="fruit"/>
+      </div>
+      <div class="swiper-slide" data-category="fruit">
+        <img class="portfolio-item" src="images/fruit/fruit_watermelon.jpg" alt="fruit"/>
+      </div>
+      <!-- Logo -->
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_shameem_kitchen.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_sanjida_fashion.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_baker_kitchen.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_egg.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_abdul_awal.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_gift_zone.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_af.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_am.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_baq.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_bj.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_cafe.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_cloud.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_design.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_herbal.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_jamuna_tv.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_jeep.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_no_pian_gain.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_sf.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_sr_dream_it.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_sh.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_ss.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_vp.jpg" alt="logo"/>
+      </div>
+      <div class="swiper-slide" data-category="logo">
+        <img class="portfolio-item" src="images/logo/logo_nr.jpg" alt="logo"/>
+      </div>
+      <!-- Restaurant -->
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_rajkonna_khana_pina.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_tikka_hat.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <video
+          class="portfolio-item"
+          autoplay muted loop playsinline
+          src="images/restaurant/restaurant_burger_pizza.mp4">
+        </video>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_chicken_wings.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_chess_treat.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_upper_chicken_frie.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_bite.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_burger.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_kabab.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_pizza.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_lemon_juice.jpg" alt="food"/>
+      </div>
+      <div class="swiper-slide" data-category="restaurant">
+        <img class="portfolio-item" src="images/restaurant/restaurant_samusa.jpg" alt="food"/>
+      </div>
+      <!-- Grocery -->
+      <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_chicken.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_alachi.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_maskalai.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_gom.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_dim.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery">
+          <video
+            class="portfolio-item"
+            autoplay muted loop playsinline
+            src="images/grocery/grocery_strawberry.mp4">
+          </video>
+        </div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_mastered_oil.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_mejabi_masala.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery">
+          <video
+            class="portfolio-item"
+            autoplay muted loop playsinline
+            src="images/grocery/grocery_cup_cake_ice_cream.mp4">
+          </video>
+        </div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_soyabin_oil.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery">
+          <video
+            class="portfolio-item"
+            autoplay muted loop playsinline
+            src="images/grocery/grocery_ice_cream.mp4">
+          </video>
+        </div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_kejur.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_honey.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery">
+          <video
+            class="portfolio-item"
+            autoplay muted loop playsinline
+            src="images/grocery/grocery_items.mp4">
+          </video>
+        </div>
+        
+        <div class="swiper-slide" data-category="grocery">
+          <video
+            class="portfolio-item"
+            autoplay muted loop playsinline
+            src="images/grocery/grocery_cup_cake_ice_cream.mp4">
+          </video>
+        </div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_himalaya.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_bite_coffee.jpg" alt="grocery"/></div>
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_biton.jpg" alt="grocery"/></div>
+        
+        <div class="swiper-slide" data-category="grocery"><img class="portfolio-item" src="images/grocery/grocery_cup_cake.jpg" alt="grocery"/></div>
+      
+        <!-- T_shirt -->
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_dly.jpg" alt="tshirt"/>
+      </div>
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_far.jpg" alt="tshirt"/>
+      </div>
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_fool.jpg" alt="tshirt"/>
+      </div>
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_mot.jpg" alt="tshirt"/>
+      </div>
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_reducefat.jpg" alt="tshirt"/>
+      </div>
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_stop.jpg" alt="tshirt"/>
+      </div>
+      <div class="swiper-slide" data-category="tshirt">
+        <img class="portfolio-item" src="images/t-shirt/t_shirt_stround.jpg" alt="tshirt"/>
+      </div>
+      <!-- Shoes -->
+      <div class="swiper-slide" data-category="shoes">
+        <img class="portfolio-item" src="images/shoes/shoe_nc.jpg" alt="shoes"/>
+      </div>
+      <div class="swiper-slide" data-category="shoes">
+        <img class="portfolio-item" src="images/shoes/shoe_shoes25.jpg" alt="shoes"/>
+      </div>
+      <div class="swiper-slide" data-category="shoes">
+        <img class="portfolio-item" src="images/shoes/shoe_sneaker.jpg" alt="shoes"/>
+      </div>
+      <!-- Game -->
+      <div class="swiper-slide" data-category="game">
+        <img class="portfolio-item" src="images/game/game_boka.jpg" alt="game"/>
+      </div>
+      <div class="swiper-slide" data-category="game">
+        <img class="portfolio-item" src="images/game/game_broken.jpg" alt="game"/>
+      </div>
+      <div class="swiper-slide" data-category="game">
+        <img class="portfolio-item" src="images/game/game_suraj_rider.jpg" alt="game"/>
+      </div>
+      <div class="swiper-slide" data-category="game">
+        <img class="portfolio-item" src="images/game/game_suraj.jpg" alt="game"/>
+      </div>
+      <div class="swiper-slide" data-category="game">
+        <img class="portfolio-item" src="images/game/game_vampire.jpg" alt="game"/>
+      </div>
+      <!-- Banner -->
+      <div class="swiper-slide" data-category="banner">
+        <img class="portfolio-item" src="images/banner/banner_new_item.jpg" alt="banner"/>
+      </div>
+      <div class="swiper-slide" data-category="banner">
+        <img class="portfolio-item" src="images/banner/banner_new_month.jpg" alt="banner"/>
+      </div>
+      <div class="swiper-slide" data-category="banner">
+        <img class="portfolio-item" src="images/banner/banner_sajek.jpg" alt="banner"/>
+      </div>
+      <!-- Thumbnail -->
+      <div class="swiper-slide" data-category="thumbnail">
+        <img class="portfolio-item" src="images/thumbnail/thumbnail.jpg" alt="thumbnail"/>
+      </div>
+      <!-- Add more slides here, each with data-category="tshirt" / "restaurant" / "fruit" -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+
+  <!-- TRAINING -->
+  <section id="training" class="section" data-aos="fade-up">
+    <h2>Training Summary</h2>
+    <ul class="detail-list">
+      <li>Graphic Design Masterclass — SR DreamIT (Online, 2024–2025)</li>
+      <li>Data Entry Training — Online (2025)</li>
+      <li>Population Census Training — BBS, Netrokona Sadar (1 month, 2022)</li>
+      <li>First Aid Training — BDRCS, Netrokona (6 days, 2019)</li>
+      <li>SEQAEP Quality Improvement — Latifa Abbas Mohila Alim Madrasha (1 month, 2017)</li>
+    </ul>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section" data-aos="fade-up">
+    <h2>Professional Certifications</h2>
+    <ul class="detail-list">
+      <li>Population Census Volunteer — BBS (15–21 Jul 2022)</li>
+      <li>Basic & First Aid — BDRCS (12–18 Sep 2019)</li>
+      <li>SEQAEP — SEQAEP Project (8–9 Jul 2017)</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills & Expertise</h2>
+    <ul class="skill-list detail-list">
+      <li>Sales & Marketing</li>
+      <li>Market Research</li>
+      <li>Data Entry</li>
+      <li>Call Centre Training</li>
+      <li>Graphic Design</li>
+      <li>Adobe Photoshop & Illustrator</li>
+      <li>Facebook Marketing</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:fatemaasfi93@gmail.com" class="hover-highlight">fatemaasfi93@gmail.com</a></p>
+    <p>Phone: <a href="tel:01835183904" class="hover-highlight">01835183904</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Fatema Johora. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

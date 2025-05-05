@@ -1,0 +1,313 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* LINK HOVER HIGHLIGHT */
+.hover-highlight {
+  transition: color 0.3s ease;
+}
+.hover-highlight:hover {
+  color: #ff9800 !important;
+}
+
+/* HEADER / NAV */
+header {
+  position: fixed;
+  width: 100%;
+  background: #111;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* Hover effect on the main heading */
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.hero-intro {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.hero-intro:hover {
+  opacity: 1;
+}
+.hero-title:hover {
+  color: #ff9800;           /* change to your highlight color */
+  transform: scale(1.05);   /* slight pop on hover */
+}
+
+/* Subtitle text color */
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #eaff00; /* a bright accent */
+  margin-top: 0.25rem;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  /* Background image + dark overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* semi-transparent black overlay */
+    url('images/hero-bg.png') center/cover no-repeat;
+  color: #fff; /* ensure text pops on dark overlay */
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  animation: fadeInDown 1s ease-out;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* SECTION BASE */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* TWO-COLUMN UTILITY */
+.two-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .two-col {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* DETAIL LIST */
+.detail-list {
+  list-style: disc outside none;
+  margin-left: 1.5rem;
+}
+.detail-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* SUBHEADING TEXT */
+.subheading {
+  display: block;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* ABOUT */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+@media (min-width: 600px) {
+  .about-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* 1) Fix the slide height (e.g. 300px) or use aspect-ratio */
+.swiper-slide {
+  height: 300px;           /* ← choose whatever height matches your images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2) Make both images and videos fill that slide */
+.portfolio-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.02);
+}
+
+/* SWIPER CAROUSEL */
+.swiper-container {
+  width: 100%;
+  padding: 2rem 0;
+}
+.swiper-slide img,
+.swiper-slide video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.swiper-slide img:hover,
+.swiper-slide video:hover {
+  transform: scale(1.03);
+}
+/* make the portfolio wrap in 3-columns, new row after 3 items */
+#portfolio .swiper-container {
+  overflow: visible; /* show multiple rows outside slider viewport */
+}
+#portfolio .swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transform: none !important; /* disable Swiper’s translate */
+}
+#portfolio .swiper-slide {
+  width: auto !important; /* let grid size it */
+  margin: 0 !important;   /* gap is handled by grid */
+}
+
+/* SKILLS SECTION: inline pills + centered dot separators */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;    /* vertical center alignment */
+  list-style: none;       /* remove default bullets */
+  margin: 1rem 0 0 0;     /* keep your existing top margin */
+  padding: 0;
+}
+
+.skill-list li {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0 .75rem .75rem 0;  /* right + bottom spacing */
+  position: relative;         /* allow ::after positioning */
+  transition: background 0.3s, color 0.3s;
+}
+
+.skill-list li:hover {
+  background: #ff9800;
+  color: #fff;
+}
+
+/* TRAINING & CERTIFICATIONS */
+#training .detail-list li,
+#certifications .detail-list li {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #111;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* AOS OVERRIDES */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* KEYFRAMED ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Portfolio text-menu styling */
+.portfolio-menu {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.portfolio-menu .menu-item {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  color: #555;
+}
+.portfolio-menu .menu-item:hover,
+.portfolio-menu .menu-item.active {
+  background: #ff9800;
+  color: #fff;
+}
+/* Hide Swiper navigation arrows in Portfolio */
+#portfolio .swiper-button-next,
+#portfolio .swiper-button-prev {
+  display: none !important;
+}
+#portfolio .swiper-pagination {
+  display: none !important;
+}
